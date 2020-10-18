@@ -11,7 +11,7 @@ import {MatInputModule} from '@angular/material/input';
 import { FormsModule } from '@angular/forms'; 
 import {MatDatepickerModule} from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
-import { DatePipe } from '@angular/common'
+import { DatePipe } from '@angular/common';
 
 import { HttpClientModule } from '@angular/common/http';
 import { CustomerApiService } from './services/customer-api.service';

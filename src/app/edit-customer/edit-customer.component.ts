@@ -49,7 +49,7 @@ export class EditCustomerComponent implements OnInit {
     this.date.setFullYear(this.date.getFullYear() - 16);
 
     if(new Date(event.target.value) > this.date) {
-      alert("Please enter a valid Date of Birth");
+      alert("Customer should be 16 years or over");
     }
   }
 

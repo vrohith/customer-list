@@ -8,11 +8,11 @@ import { ICustomer } from '../customer';
 export class InMemoryDataService implements InMemoryDbService {
   createDb() {
     const customers = [
-      { id: 121, firstName: 'Sarah', lastName: 'Collins', dob: '2020-10-18' },
+      { id: 121, firstName: 'Sarah', lastName: 'Collins', dob: '2004-10-18' },
       { id: 122, firstName: 'Nick', lastName: 'T', dob: '1990-10-10' },
       { id: 123, firstName: 'Carlo', lastName: 'Smith', dob: '1998-2-19' },
       { id: 124, firstName: 'Jim', lastName: 'Smith', dob: '2000-8-21' },
-      { id: 125, firstName: 'Tina', lastName: 'Rhea', dob: '2009-12-25' },
+      { id: 125, firstName: 'Tina', lastName: 'Rhea', dob: '2003-12-25' },
      
     ];
     return {customers};
