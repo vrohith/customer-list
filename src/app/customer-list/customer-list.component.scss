@@ -1,10 +1,12 @@
+@import '../variables';
+
 .customer {
     font-size: 1rem;
     padding: 0 3rem 2rem;
-    background-color:#dae0e6;
+    background-color: $background-color;
     
     &__inner {
-        max-width: 760px;
+        max-width: 740px;
         margin: auto;
         background-color: white;
     }
@@ -20,7 +22,7 @@
     padding-top: 1rem;
     
     &__table {
-        width: 780px;
+        width: 710px;
     }
    
     &__label {
@@ -30,7 +32,7 @@
         border-top: none;
         border-left: none;
         border-right: none;
-        border-bottom: solid 0.5px #949494;
+        border-bottom: solid 0.5px $border-gray;
         padding-bottom: 0.5rem;
 
         &:focus {
@@ -40,13 +42,19 @@
     }
     button {
         color: white;
-        background-color: #007bff;
+        background-color: $color-blue;
         margin-bottom: 1rem;;
+    }
+    @media screen and (max-width: $screen-medium) {
+        display: none;
     }
 }
 
 .filterCustomer {
     padding-left: 1rem;
+    @media screen and (max-width: $screen-medium) {
+        display: none;
+    }
 }
 .customer-list {
     padding-left: 1rem;
@@ -64,27 +72,27 @@
         text-align: left;
     }
     th {
-        border-bottom: 1px solid #dee2e6;
-        border-top: 1px solid #dee2e6;
-        color: #007bff;
+        border-bottom: 1px solid $table-border;
+        border-top: 1px solid $table-border;
+        color: $color-blue;
         padding: 0.75rem 2rem;
         font-size: 1rem;
     }
     td {
-        border-bottom: 1px solid #dee2e6;
-        border-top: 1px solid #dee2e6;
+        border-bottom: 1px solid $table-border;
+        border-top: 1px solid $table-border;
         padding: 0.5rem 0 0.5rem 2rem;
         font-size: 1rem;
     }
     &__button {
         color: white;
-        background-color: #007bff;
+        background-color: $color-blue;
     }
     .delete {
-        background-color: #212529;
+        background-color: $delete-button-color;
         color: white;
     }
-}
-body {
-    background-color: #dae0e6;
+    @media screen and (max-width: $screen-medium) {
+        display: none;
+    }
 }

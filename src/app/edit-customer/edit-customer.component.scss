@@ -1,9 +1,9 @@
 
-
+@import '../variables';
 .edit-customer {
     font-size: 1rem;
     padding: 0 3rem 2rem;
-    background-color:#dae0e6;
+    background-color: $background-color;
     height: 100vh;
     
     &__inner {
@@ -21,7 +21,7 @@
     }
 
     &__table {
-        width: 780px;
+        width: 760px;
     }
    
     &__detail {
@@ -32,7 +32,7 @@
     }
     button {
         color: white;
-        background-color: #007bff;
+        background-color: $color-blue;
         margin-right: 1rem;
         margin-top: 2rem;
     }
@@ -40,11 +40,15 @@
         border-top: none;
         border-left: none;
         border-right: none;
-        border-bottom: solid 0.5px #949494;
+        border-bottom: solid 0.5px $border-gray;
         padding-bottom: 0.5rem;
         &:focus {
             outline: none;
         }
     
+    }
+
+    @media screen and (max-width: $screen-medium) {
+        display: none;
     }
 }
