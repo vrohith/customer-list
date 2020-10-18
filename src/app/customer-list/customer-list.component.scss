@@ -1,0 +1,87 @@
+.customer {
+    font-size: 1rem;
+    padding: 0 3rem 2rem;
+    background-color:#dae0e6;
+    
+    &__inner {
+        max-width: 760px;
+        margin: auto;
+        background-color: white;
+    }
+
+    input {
+        height: 24px;
+        font-size: 1rem;
+    }
+}
+
+.addCustomer {
+    padding-left: 1rem;
+    padding-top: 1rem;
+    
+    &__table {
+        width: 780px;
+    }
+   
+    &__label {
+        padding-right: 1rem;     
+    }
+    .dob {
+        border-top: none;
+        border-left: none;
+        border-right: none;
+        border-bottom: solid 0.5px #949494;
+        padding-bottom: 0.5rem;
+
+        &:focus {
+            outline: none;
+        }
+    
+    }
+    button {
+        color: white;
+        background-color: #007bff;
+        margin-bottom: 1rem;;
+    }
+}
+
+.filterCustomer {
+    padding-left: 1rem;
+}
+.customer-list {
+    padding-left: 1rem;
+    padding-bottom: 2rem;
+
+    &__table {
+        //width: 60%;
+        text-align: left;
+        border-collapse: collapse;
+
+        font-size: 1rem;
+        font-weight: 400;
+        line-height: 1.5;
+        color: #212529;
+        text-align: left;
+    }
+    th {
+        border-bottom: 1px solid #dee2e6;
+        border-top: 1px solid #dee2e6;
+        color: #007bff;
+        padding: 0.75rem 2rem;
+        font-size: 1rem;
+    }
+    td {
+        border-bottom: 1px solid #dee2e6;
+        border-top: 1px solid #dee2e6;
+        padding: 0.5rem 0 0.5rem 2rem;
+        font-size: 1rem;
+    }
+    &__button {
+        color: white;
+        background-color: #007bff;
+    }
+    .delete {
+        background-color: #212529;
+        color: white;
+    }
+}

@@ -1,0 +1,73 @@
+<section class="customer">
+    <div class="customer__inner">
+        <!-- Add Customer Section -->
+        <div class="addCustomer">
+            <h2 class="addCustomer__heading">New Customer</h2>
+
+            <table class="addCustomer__table" cellspacing="0">
+                <tr>
+                    <td>
+                        <mat-form-field floatLabel="never">
+                            <mat-label>First name</mat-label>
+                            <input matInput #customerFirstName required >
+                        </mat-form-field>
+                    </td>
+                    <td>
+                        <mat-form-field floatLabel="never">
+                            <mat-label>Last Name</mat-label>
+                            <input matInput #customerLastName required>
+                        </mat-form-field>
+                    </td>
+                    <td>
+                        <label >
+                            <input class="dob" placeholder="Date of Birth" #customerDOB type="date" />
+                          </label>
+                    </td>
+                </tr>
+            </table>
+            
+            <button mat-raised-button (click)="addCustomer(customerFirstName.value, customerLastName.value, customerDOB.value); customerFirstName.value=''; customerLastName.value=''; customerDOB.value=''">
+                Add
+            </button>
+        </div>
+
+        <!-- Filter Customer Section -->
+        <div class="filterCustomer">
+            <mat-form-field >
+                <mat-label>Filter by:</mat-label>
+                <input matInput [(ngModel)]='listFilter' type="text" >
+            </mat-form-field>
+        </div>
+
+        <!-- Customer Table -->
+        <div class="customer-list">
+            <table class="customer-list__table">
+                <thead>
+                    <tr>
+                        <th>Id</th>
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                        <th>DOB</th>
+                        <th>Edit</th>
+                        <th>Delete</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let customer of filteredCustomers">
+                        <td>{{customer.id}}</td>
+                        <td>{{customer.firstName}}</td>
+                        <td>{{customer.lastName}}</td>
+                        <td>{{customer.dob}}</td>
+                        <td>
+                            <a routerLink="/editcustomer/{{customer.id}}" mat-raised-button class="customer-list__button">
+                                <span >Edit</span>
+                            </a>
+                        </td>
+                        <td><button class="delete" mat-raised-button title="delete Customer" (click)="delete(customer)">x</button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</section>
+

@@ -1,0 +1,50 @@
+
+
+.edit-customer {
+    font-size: 1rem;
+    padding: 0 3rem 2rem;
+    background-color:#dae0e6;
+    height: 100vh;
+    
+    &__inner {
+        max-width: 760px;
+        margin: auto;
+        background-color: white;
+        padding-left: 1rem;
+        padding-bottom: 2rem;
+        padding-top: 2rem;
+    }
+
+    input {
+        height: 24px;
+        font-size: 1rem;
+    }
+
+    &__table {
+        width: 780px;
+    }
+   
+    &__detail {
+        padding-top: 1rem;
+    }
+    label {
+        padding-right: 2rem;
+    }
+    button {
+        color: white;
+        background-color: #007bff;
+        margin-right: 1rem;
+        margin-top: 2rem;
+    }
+    .dob {
+        border-top: none;
+        border-left: none;
+        border-right: none;
+        border-bottom: solid 0.5px #949494;
+        padding-bottom: 0.5rem;
+        &:focus {
+            outline: none;
+        }
+    
+    }
+}

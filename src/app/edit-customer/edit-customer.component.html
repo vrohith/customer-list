@@ -1,0 +1,35 @@
+<section class="edit-customer">
+  <div *ngIf="customer" class="edit-customer__inner">
+    <h2>{{customer.firstName | uppercase}} Details</h2>
+    <div><span>id: </span>{{customer.id}}</div>
+
+    <div class="edit-customer__detail">
+      <table class="edit-customer__table" cellspacing="0">
+        <tr>
+            <td>
+                <mat-form-field>
+                    <mat-label>First name</mat-label>
+                    <input matInput [(ngModel)]="customer.firstName">
+                </mat-form-field>
+            </td>
+            <td>
+                <mat-form-field>
+                    <mat-label>Last Name</mat-label>
+                    <input matInput [(ngModel)]="customer.lastName">
+                </mat-form-field>
+            </td>
+            <td>
+              <label>
+                <input [(ngModel)]="customer.dob" class="dob" placeholder="Date of Birth" type="date" (change)="checkDate($event);" />
+              </label>
+            </td>
+        </tr>
+    </table>
+
+    </div>
+
+    <button mat-raised-button (click)="goBack()">Return</button>
+    <button mat-raised-button (click)="save()">Save</button>
+  </div>
+</section>
+  
